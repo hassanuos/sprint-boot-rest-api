@@ -1,0 +1,36 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://lama:lama@cluster0.exzefa4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: journaldb
+      auto-index-creation: true
+
+server:
+  port: 8090
+  servlet:
+    context-path: /journal
+
+logging:
+  level:
+    net:
+      newmongoproject:
+        journal: DEBUG
+
+# Display only ERROR Logs
+#logging:
+#  level:
+#    root:ERROR
+
+# OFF logs for whole system
+#logging:
+#  level:
+#    root:OFF
+
+
+# OFF Logs for specific class
+#logging:
+#  level:
+#    net:
+#      newmongoproject:
+#        service:
+#          UserService:OFF
